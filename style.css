@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: hsl(0, 0%, 90%);
+  --tx-color: hsl(240, 6%, 21%);
+  --off-sound-img: hsl(240, 6%, 21%);
+  --on-sound-img: hsl(0, 0%, 90%);
+  --bg-off-sound-btn: hsl(240, 9%, 89%);
+  --bg-on-sound-btn: hsl(194, 97%, 31%);
+  --btn-controls: hsl(240, 6%, 21%);
+}
+
+body {
+  height: 100vh;
+  align-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 82rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.sounds button.soundOn {
+  color: var(--on-sound-img);
+  background-color: var(--bg-on-sound-btn);
+}
+
+.time {
+  font-size: 12.6rem;
+  color: var(--tx-color);
+}
+
+.timer-controls {
+  gap: 4rem;
+}
+
+.timer-controls button {
+  border: none;
+  background: none;
+  color: var(--btn-controls);
+  font-size: 4.8rem;
+}
+
+button {
+  transition: .3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.sounds button {
+  aspect-ratio: 1 / 1;
+  width: 13rem;
+  font-size: 5rem;
+  border: none;
+  background-color: var(--bg-off-sound-btn);
+  border-radius: 2.4rem;
+}
